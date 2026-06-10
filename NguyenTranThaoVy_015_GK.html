@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>DAISY COFFEE</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fffafc;
+        }
+
+        header{
+            background: rgb(209, 151, 228);
+            color: black;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav{
+            background: rgb(226, 153, 219);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: black;
+            border: 2px solid white;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        nav a:hover{
+            background: rgb(185, 82, 170);
+            color: white;
+        }
+
+        .container{
+            width: 90%;
+            margin: auto;
+        }
+
+        h2{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card{
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+            background: white;
+            border-radius: 15px;
+        }
+
+        .card img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        button{
+            background: rgb(226, 131, 209);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background: rgb(190, 90, 170);
+        }
+
+        .tongtien{
+            text-align: center;
+            margin: 20px;
+        }
+
+        footer{
+            background: rgb(236, 170, 182);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>DAISY COFFEE</h1>
+</header>
+
+<nav>
+    <a href="#douong">ĐỒ UỐNG</a>
+    <a href="#giamgia">GIẢM GIÁ</a>
+    <a href="#menuhot">MENU HOT</a>
+</nav>
+
+<div class="container">
+
+    <h2 id="douong">CÁC ĐỒ UỐNG</h2>
+
+    <div class="card">
+        <img src="images/tramangcau.jpg" alt="Trà Mãng Cầu">
+        <h3>Trà Mãng Cầu</h3>
+        <p>Giá: 30.000đ</p>
+        <button onclick="hienThi('Trà Mãng Cầu',30000)">
+            Đặt
+        </button>
+    </div>
+
+    <div class="card">
+        <img src="images/trasuathaixanh.jpg" alt="Trà Sữa Thái Xanh">
+        <h3>Trà Sữa Thái Xanh</h3>
+        <p>Giá: 25.000đ</p>
+        <button onclick="hienThi('Trà Sữa Thái Xanh',25000)">
+            Đặt
+        </button>
+    </div>
+
+    <div class="card">
+        <img src="images/trachanh.jpg" alt="Trà Chanh">
+        <h3>Trà Chanh</h3>
+<p>Giá: 25.000đ</p>
+        <button onclick="hienThi('Trà Chanh',25000)">
+            Đặt
+        </button>
+    </div>
+
+    <div class="tongtien">
+        <button onclick="thongBao()">
+            Xem Tổng Tiền
+        </button>
+    </div>
+
+</div>
+
+<footer>
+    <p>Thông Tin Liên Hệ</p>
+    <p>Email: daisycoffee@gmail.com</p>
+    <p>SĐT: 0398666214</p>
+    <p>Daisy Coffee xin hân hạnh được phục vụ quý khách.</p>
+</footer>
+
+<script>
+
+let tongTien = 0;
+
+function hienThi(tenMon, gia){
+    alert("Bạn đã đặt: " + tenMon);
+    tongTien += gia;
+}
+
+function thongBao(){
+    alert("Tổng tiền của bạn là: " + tongTien.toLocaleString() + "đ");
+}
+
+</script>
+
+</body>
+</html>
